@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRight, Mail, Github, Linkedin, FileText, MapPin, Sun, Moon, Award, BriefcaseBusiness, GraduationCap, Rocket, LayoutDashboard, Timeline, ShieldCheck, Medal, Link2 } from 'lucide-react'
+import { ArrowRight, Mail, Github, Linkedin, FileText, MapPin, Sun, Moon, Award, Briefcase, GraduationCap, Rocket, LayoutDashboard, Activity, Shield, Link as LinkIcon } from 'lucide-react'
 
 function App() {
   // UI state
@@ -48,7 +48,7 @@ function App() {
   const socials = useMemo(() => ([
     { title: 'GitHub', icon: Github, href: 'https://github.com/Nityaj22' },
     { title: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/nityajhaveri/' },
-    { title: 'Resume', icon: FileText, href: '#' , primary: true},
+    { title: 'Resume', icon: FileText, href: '#', primary: true },
   ]), [])
 
   const experience = [
@@ -238,7 +238,7 @@ function App() {
       </Section>
 
       {/* Experience */}
-      <Section id="experience" title="Experience" icon={BriefcaseBusiness}>
+      <Section id="experience" title="Experience" icon={Briefcase}>
         <div className="mt-6 grid gap-4">
           {experience.map((e, i) => (
             <ExperienceCard key={i} {...e} />
@@ -247,7 +247,7 @@ function App() {
       </Section>
 
       {/* Projects & Activities */}
-      <Section id="projects" title="Projects & Activities" icon={Timeline}>
+      <Section id="projects" title="Projects & Activities" icon={Activity}>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <ProjectCard key={i} {...p} />
@@ -256,7 +256,7 @@ function App() {
       </Section>
 
       {/* Leadership & Awards */}
-      <Section id="leadership" title="Leadership & Engagement" icon={ShieldCheck}>
+      <Section id="leadership" title="Leadership & Engagement" icon={Shield}>
         <div className="mt-6 grid md:grid-cols-2 gap-4">
           {leadership.map((l, i) => (
             <div key={i} className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5">
@@ -265,7 +265,7 @@ function App() {
                   <h4 className="font-semibold">{l.title}</h4>
                   <p className="text-sm text-slate-600 dark:text-slate-400">{l.org}</p>
                 </div>
-                <Medal className="text-amber-600" size={18} />
+                <Award className="text-amber-600" size={18} />
               </div>
               <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{l.details}</p>
             </div>
@@ -396,7 +396,7 @@ function ProjectCard({ title, description, tags, link }) {
         </div>
         {link && (
           <a href={link} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm text-amber-700 dark:text-amber-400 hover:underline">
-            Learn more <Link2 size={14} />
+            Learn more <LinkIcon size={14} />
           </a>
         )}
       </div>
