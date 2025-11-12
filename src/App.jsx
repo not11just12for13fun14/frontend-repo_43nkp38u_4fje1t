@@ -46,9 +46,9 @@ function App() {
   const tagline = 'Purdue CS + Economics Junior — building data-driven products where technology meets markets.'
 
   const socials = useMemo(() => ([
-    { title: 'GitHub', icon: Github, href: 'https://github.com/your-github' },
-    { title: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/your-linkedin' },
-    { title: 'Resume', icon: FileText, href: '#', primary: true },
+    { title: 'GitHub', icon: Github, href: 'https://github.com/Nityaj22' },
+    { title: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/nityajhaveri/' },
+    { title: 'Resume', icon: FileText, href: '#' , primary: true},
   ]), [])
 
   const experience = [
@@ -321,8 +321,8 @@ function App() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="mailto:jhaverin@purdue.edu" className="inline-flex items-center gap-2 text-sm text-amber-700 dark:text-amber-400 hover:underline"><Mail size={16}/> jhaverin@purdue.edu</a>
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" className="inline-flex items-center gap-2 text-sm text-amber-700 dark:text-amber-400 hover:underline" rel="noreferrer"><Linkedin size={16}/> LinkedIn</a>
-          <a href="https://github.com/your-github" target="_blank" className="inline-flex items-center gap-2 text-sm text-amber-700 dark:text-amber-400 hover:underline" rel="noreferrer"><Github size={16}/> GitHub</a>
+          <a href="https://www.linkedin.com/in/nityajhaveri/" target="_blank" className="inline-flex items-center gap-2 text-sm text-amber-700 dark:text-amber-400 hover:underline" rel="noreferrer"><Linkedin size={16}/> LinkedIn</a>
+          <a href="https://github.com/Nityaj22" target="_blank" className="inline-flex items-center gap-2 text-sm text-amber-700 dark:text-amber-400 hover:underline" rel="noreferrer"><Github size={16}/> GitHub</a>
         </div>
       </Section>
 
